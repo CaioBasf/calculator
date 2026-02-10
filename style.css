@@ -1,8 +1,10 @@
+/* General Configs*/
+
 :root {
   --background: rgb(25, 25, 25);
   --calculator-main: rgb(0, 0, 0);
   --buttons-numbersPlus: rgb(33, 33, 33);
-  --buttons-operators: rgb(235, 80, 65);
+  --buttons-operators: #eb5041;
   --buttons-function: rgb(98, 98, 98);
   --primary-font: Inter, Arial;
 }
@@ -25,10 +27,22 @@ body {
 }
 
 .icons {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
+}
+
+.iconCalculator {
   filter: brightness(0) invert(1);
 }
+
+.iconList {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+
+
+/* Calculator configs*/
 
 .calculator {
   display: flex;
@@ -36,7 +50,7 @@ body {
   gap: 5px;
   padding: 20px;
   background-color: var(--calculator-main);
-  width: 450px;
+  width: 400px;
   height: 800px;
   border-radius: 25px;
 }
@@ -60,9 +74,12 @@ body {
   align-items: center;
 }
 
-.iconList {
-  width: 30px;
-  height: 30px;
+.history:hover .iconList {
+  filter: brightness(0.7);
+}
+
+.history:active .iconList {
+  filter: brightness(1.5);
 }
 
 
@@ -73,11 +90,13 @@ body {
   font-size: 75px;
 }
 
+/* Buttons configs */
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  justify-content: center;
-  gap: 15px;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 .button {
@@ -85,8 +104,8 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 36px;
-  width: 90px;
-  height: 90px;
+  width: 85px;
+  height: 85px;
   border-radius: 20px;
   border: none;
   color: white;
