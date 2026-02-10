@@ -3,57 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Fontes-->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <title>Caculator</title>
-
+  <!-- /Fontes -->
   <link rel="stylesheet" href="style.css">
+  <title>Calculator - Iphone</title>
 </head>
   <body>
-    <main class="main-container">
-      <header class="main-header">
-        <section class="section-history">
-          <button class="history"> H </button>
-        </section>
-        <section class="section-result">
-          <p class="result"> Result </p>
-        </section>
-      </header>
-
-
-      <section class="main-section">
-        <section class="second-section">
-          <section class="stuff">
-            <button> AC </button>
-            <button> +/- </button>
-            <button> % </button>
-          </section>
-          <section class="numbers-more">
-            <button> 7 </button>
-            <button> 8 </button>
-            <button> 9 </button>
-            <button> 4 </button>
-            <button> 5 </button>
-            <button> 6 </button>
-            <button> 1 </button>
-            <button> 2 </button>
-            <button> 3 </button>
-            <button> C </button>
-            <button> 0 </button>
-            <button> , </button>
-          </section>
-        </section>
-        <section class="operators">
-          <button> ÷ </button>
-          <button> x </button>
-          <button> - </button>
-          <button> + </button>
-          <button> = </button>
-        </section>
-      </section>
+    <main class="calculator">
+      <div class="display">
+        <button class="history"><img src="icons\menu.png" alt="history" class="icons iconList"></button>
+        <p class="result">55</p>
+      </div>
+      <div class="buttons">
+        <button class="button function ac">AC</button>
+        <button class="button function change">+/-</button>
+        <button class="button function percent">%</button>
+        <button class="button operator divider">&divide</button>
+        <button class="button number 7">7</button>
+        <button class="button number 8">8</button>
+        <button class="button number 9">9</button>
+        <button class="button operator times">X</button>
+        <button class="button number 4">4</button>
+        <button class="button number 5">5</button>
+        <button class="button number 6">6</button>
+        <button class="button operator minus">-</button>
+        <button class="button number 1">1</button>
+        <button class="button number 2">2</button>
+        <button class="button number 3">3</button>
+        <button class="button operator plus">+</button>
+        <button class="button number cc"><img src="icons\calculator.png" alt="Calculator" class="icons iconCalculator"></button>
+        <button class="button number 0">0</button>
+        <button class="button number comma">,</button>
+        <button class="button operator equal">=</button>
+      </div>
+      <div class="mainline">
+        <div class="line"></div>
+      </div>
     </main>
   </body>
 </html>

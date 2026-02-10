@@ -1,101 +1,149 @@
+:root {
+  --background: rgb(25, 25, 25);
+  --calculator-main: rgb(0, 0, 0);
+  --buttons-numbersPlus: rgb(33, 33, 33);
+  --buttons-operators: rgb(235, 80, 65);
+  --buttons-function: rgb(98, 98, 98);
+  --primary-font: Inter, Arial;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 1000px;
-  background-color: rgb(25, 25, 25);
+  min-height: 100vh;
+  background: var(--background);
+  color: white;
+  font-family: var(--primary-font);
+  font-weight: 300;
 }
 
-button {
-  font-family: Inter;
-  font-size: 40px;
-  height: 90px;
-  width: 90px;
+.icons {
+  width: 35px;
+  height: 35px;
+  filter: brightness(0) invert(1);
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+  background-color: var(--calculator-main);
+  width: 450px;
+  height: 800px;
+  border-radius: 25px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  justify-content: space-between;
+}
+
+.history {
+  display: flex;
+  flex-direction: row;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(188, 46, 46, 0);
   border: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconList {
+  width: 30px;
+  height: 30px;
+}
+
+
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  font-size: 75px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: 15px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  width: 90px;
+  height: 90px;
   border-radius: 20px;
-  padding: 0px;
+  border: none;
   color: white;
   cursor: pointer;
 }
 
-.main-container {
+.function {
+  background-color: var(--buttons-function);
+  transition: 0.3s;
+}
+
+.function:hover {
+  background-color: color-mix(in lab, var(--buttons-function) 100%, white 30%);
+}
+
+.function:active {
+  background-color: color-mix(in lab, var(--buttons-function) 100%, white 60%);
+  transition: 0s;
+}
+
+.operator {
+  background-color: var(--buttons-operators);
+  transition: 0.3s;
+}
+
+.operator:hover {
+  background-color: color-mix(in lab, var(--buttons-operators) 100%, white 30%);
+}
+.operator:active {
+  background-color: color-mix(in lab, var(--buttons-operators) 100%, white 60%);
+  transition: 0s;
+}
+
+.number {
+  background-color: var(--buttons-numbersPlus);
+  transition: 0.3s;
+}
+
+.number:hover {
+  background-color: color-mix(in lab, var(--buttons-numbersPlus) 100%, white 30%);
+}
+
+.number:active {
+  background-color: color-mix(in lab, var(--buttons-numbersPlus) 100%, white 60%);
+  transition: 0s;
+}
+
+.mainline {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 800px;
-  width: 450px;
-  background: black;
-  border-radius: 15px;
-  padding: 20px;
-}
-
-.main-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-  width: 100%;
-  border: solid yellow;
-}
-
-.section-result {
-  display: flex;
-  justify-content: end;
-  padding-right: 20px;
-}
-
-.result {
-  font-family: Inter;
-  font-size: 54px;
-  color: white;
-  margin: 0px;
-}
-
-.main-section {
-  display: flex;
-  flex-direction: row;
-  border: solid red;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.second-section {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.stuff {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.stuff button {
-  background-color: rgb(98, 98, 98);
-}
-
-.numbers-more {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.numbers-more button {
-  background-color: rgb(33, 33, 33);
-}
-
-.operators {
-  display: flex;
-  flex-direction: column;
-}
-
-.operators button {
-  background-color: rgb(235, 80, 65);
-}
-
-.operators .numbers-more .stuff .second-section {
   align-items: center;
-  justify-content: center;
+}
+
+.line {
+  background-color: white;
+  border-radius: 20px;
+  width: 150px;
+  height: 5px;
+  margin-top: 20px;
 }
